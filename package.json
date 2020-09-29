@@ -1,0 +1,25 @@
+{
+  "name": "cypress-mochawesome-sample",
+  "version": "1.0.0",
+  "description": "Setup for quickly starting webgui automation",
+  "main": "index.js",
+  "scripts": {
+    "clean-reports":"rm -rf cypress/reports; rm -rf mochawesome-report",
+    "test": "npx cypress run",
+    "merge-report": "npx mochawesome-merge cypress/reports/separate-reports/*.json > cypress/reports/full_report.json",
+    "generate-report": "npx mochawesome-report-generator cypress/reports cypress/reports/full_report.json",
+    "report:copyScreenshots": "cp -r cypress/screenshots mochawesome-report",
+    "after:tests": "npm run merge-report; npm run generate-report; npm run report:copyScreenshots",
+    "cypress": "npm run clean-reports; npm run test; npm run after:tests"
+  },
+  "author": "dkoul@redhat.com",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.6.0"
+  },
+  "dependencies": {
+    "mailslurp-client": "^8.7.8",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0"
+  }
+}

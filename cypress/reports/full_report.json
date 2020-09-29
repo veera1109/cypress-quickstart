@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-29T10:46:15.638Z",
+    "end": "2020-09-29T10:46:15.638Z",
+    "duration": 6217,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1d2247dc-6d31-499f-b134-4002d7a3e565",
+      "title": "",
+      "fullFile": "cypress/integration/regression/navigation.spec.js",
+      "file": "cypress/integration/regression/navigation.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "182f0e75-87d2-42ff-92ab-964d8e22acc4",
+          "title": "Check the login feature of the internet app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should verify valid user",
+              "fullTitle": "Check the login feature of the internet app Should verify valid user",
+              "timedOut": null,
+              "duration": 4427,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit();\nloginPage.signInWith('tomsmith', 'SuperSecretPassword!');\nloginPage.getMessage().contains('You logged into a secure area');",
+              "err": {},
+              "uuid": "7dc0c6b1-1696-41b8-9f00-bbca7e5cd188",
+              "parentUUID": "182f0e75-87d2-42ff-92ab-964d8e22acc4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should verify invalid user",
+              "fullTitle": "Check the login feature of the internet app Should verify invalid user",
+              "timedOut": null,
+              "duration": 1790,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit();\nloginPage.signInWith('admin', 'admin!');\nloginPage.getMessage().contains('Your username is invalid!');",
+              "err": {},
+              "uuid": "39831c6f-1d3e-4e68-85cd-3817e5ca7dc3",
+              "parentUUID": "182f0e75-87d2-42ff-92ab-964d8e22acc4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7dc0c6b1-1696-41b8-9f00-bbca7e5cd188",
+            "39831c6f-1d3e-4e68-85cd-3817e5ca7dc3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6217,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/separate-reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
